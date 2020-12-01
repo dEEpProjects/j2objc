@@ -326,10 +326,10 @@ emit_library_rules = $(foreach arch,$(J2OBJC_ARCHS),\
   $(if $(FAT_LIB_MAC_CATALYST_ARCH),\
     $(eval $(call mac_catalyst_lib_rule,$(1))) $(ARCH_BUILD_MAC_CATALYST_DIR)/lib$(1).a,) \
   $(if $(FAT_LIB_TV_SIMULATOR_ARCHS),\
-    $(eval $(call tv_lib_rule,$(1),$(FAT_LIB_TV_SIMULATOR_ARCHS:%=$(BUILD_DIR)/objs-%/lib$(1).a))) \
+    $(eval $(call tv_simulator_lib_rule,$(1),$(FAT_LIB_TV_SIMULATOR_ARCHS:%=$(BUILD_DIR)/objs-%/lib$(1).a))) \
     $(ARCH_BUILD_TV_SIMULATOR_DIR)/lib$(1).a,) \
   $(if $(FAT_LIB_TV_ARCHS),\
-    $(eval $(call tv_simulator_lib_rule,$(1),$(FAT_LIB_TV_ARCHS:%=$(BUILD_DIR)/objs-%/lib$(1).a))) \
+    $(eval $(call tv_lib_rule,$(1),$(FAT_LIB_TV_ARCHS:%=$(BUILD_DIR)/objs-%/lib$(1).a))) \
     $(ARCH_BUILD_TV_DIR)/lib$(1).a,) \
 
 emit_arch_specific_compile_rules = $(foreach arch,$(J2OBJC_ARCHS),\
