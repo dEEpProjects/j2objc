@@ -300,7 +300,7 @@ else
 FAT_LIB_IOS_ARCHS = $(filter-out macos% maccatalyst appletv% watch% sim%,$(J2OBJC_ARCHS))
 FAT_LIB_IOS_SIMULATOR_ARCHS = $(filter sim%,$(J2OBJC_ARCHS))
 FAT_LIB_MAC_ARCHS = $(filter macos%,$(J2OBJC_ARCHS))
-FAT_LIB_WATCH_ARCHS = $(filter-out watchsimulator%,$(filter watch%,$(J2OBJC_ARCHS)))
+FAT_LIB_WATCH_ARCHS = $(filter-out watchsim%,$(filter watch%,$(J2OBJC_ARCHS)))
 FAT_LIB_WATCH_SIMULATOR_ARCHS = $(filter watchsim%,$(J2OBJC_ARCHS))
 FAT_LIB_TV_ARCHS = $(filter-out appletvsim%,$(filter appletv%,$(J2OBJC_ARCHS)))
 FAT_LIB_TV_SIMULATOR_ARCHS = $(filter appletvsim%,$(J2OBJC_ARCHS))
@@ -327,7 +327,7 @@ emit_library_rules = $(foreach arch,$(J2OBJC_ARCHS),\
     $(eval $(call mac_catalyst_lib_rule,$(1))) $(ARCH_BUILD_MAC_CATALYST_DIR)/lib$(1).a,) \
   $(if $(FAT_LIB_TV_SIMULATOR_ARCHS),\
     $(eval $(call tv_lib_rule,$(1),$(FAT_LIB_TV_SIMULATOR_ARCHS:%=$(BUILD_DIR)/objs-%/lib$(1).a))) \
-    $(ARCH_BUILD_TV_SIMULATOR_DIR)/lib$(1).a,),\
+    $(ARCH_BUILD_TV_SIMULATOR_DIR)/lib$(1).a,) \
   $(if $(FAT_LIB_TV_ARCHS),\
     $(eval $(call tv_simulator_lib_rule,$(1),$(FAT_LIB_TV_ARCHS:%=$(BUILD_DIR)/objs-%/lib$(1).a))) \
     $(ARCH_BUILD_TV_DIR)/lib$(1).a,) \

@@ -54,9 +54,9 @@ ARCH_LIB_WATCH_DIR = $(ARCH_LIB_DIR)/watchos
 DIST_LIB_WATCH_DIR = $(DIST_LIB_DIR)/watchos
 
 # Watchos Simulator library dirs.
-ARCH_BUILD_WATCH_SIMULATOR_DIR = $(ARCH_BUILD_DIR)/watchossimulator
-ARCH_LIB_WATCH_SIMULATOR_DIR = $(ARCH_LIB_DIR)/watchossimulator
-DIST_LIB_WATCH_SIMULATOR_DIR = $(DIST_LIB_DIR)/watchossimulator
+ARCH_BUILD_WATCH_SIMULATOR_DIR = $(ARCH_BUILD_DIR)/watchsimulator
+ARCH_LIB_WATCH_SIMULATOR_DIR = $(ARCH_LIB_DIR)/watchsimulator
+DIST_LIB_WATCH_SIMULATOR_DIR = $(DIST_LIB_DIR)/watchsimulator
 
 # Appletv library dirs.
 ARCH_BUILD_TV_DIR = $(ARCH_BUILD_DIR)/appletvos
@@ -64,9 +64,9 @@ ARCH_LIB_TV_DIR = $(ARCH_LIB_DIR)/appletvos
 DIST_LIB_TV_DIR = $(DIST_LIB_DIR)/appletvos
 
 # Appletv Simulator library dirs.
-ARCH_BUILD_TV_SIMULATOR_DIR = $(ARCH_BUILD_DIR)/appletvossimulator
-ARCH_LIB_TV_SIMULATOR_DIR = $(ARCH_LIB_DIR)/appletvossimulator
-DIST_LIB_TV_SIMULATOR_DIR = $(DIST_LIB_DIR)/appletvossimulator
+ARCH_BUILD_TV_SIMULATOR_DIR = $(ARCH_BUILD_DIR)/appletvsimulator
+ARCH_LIB_TV_SIMULATOR_DIR = $(ARCH_LIB_DIR)/appletvsimulator
+DIST_LIB_TV_SIMULATOR_DIR = $(DIST_LIB_DIR)/appletvsimulator
 
 # Mac Catalyst library dirs.
 ARCH_BUILD_MAC_CATALYST_DIR = $(ARCH_BUILD_DIR)/maccatalyst
