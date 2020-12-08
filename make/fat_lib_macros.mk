@@ -32,19 +32,19 @@ FAT_LIB_MACOSXARM_FLAGS = $(FAT_LIB_OSX_FLAGS) -arch arm64 -DJ2OBJC_BUILD_ARCH=a
   -isysroot $(FAT_LIB_MACOSX_SDK_DIR)
 
 # iOS target build flags
-FAT_LIB_IPHONE_FLAGS = -arch armv7 -DJ2OBJC_BUILD_ARCH=armv7 -miphoneos-version-min=5.0 \
+FAT_LIB_IPHONE_FLAGS = -arch armv7 -DJ2OBJC_BUILD_ARCH=armv7 -mios-version-min=5.0 \
   -isysroot $(FAT_LIB_IPHONE_SDK_DIR)
-FAT_LIB_IPHONE64_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -miphoneos-version-min=5.0 \
+FAT_LIB_IPHONE64_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -mios-version-min=5.0 \
   -isysroot $(FAT_LIB_IPHONE_SDK_DIR)
-FAT_LIB_IPHONE64E_FLAGS = -arch arm64e -DJ2OBJC_BUILD_ARCH=arm64e -miphoneos-version-min=12.0 \
+FAT_LIB_IPHONE64E_FLAGS = -arch arm64e -DJ2OBJC_BUILD_ARCH=arm64e -mios-version-min=12.0 \
   -isysroot $(FAT_LIB_IPHONE_SDK_DIR)
 
 # iOS Simulator build flags
-FAT_LIB_SIMULATOR_FLAGS = -arch i386 -DJ2OBJC_BUILD_ARCH=i386 -miphoneos-version-min=5.0 \
+FAT_LIB_SIMULATOR_FLAGS = -arch i386 -DJ2OBJC_BUILD_ARCH=i386 -mios-simulator-version-min=5.0 \
   -isysroot $(FAT_LIB_SIMULATOR_SDK_DIR)
-FAT_LIB_SIMULATOR64_FLAGS = -arch x86_64 -DJ2OBJC_BUILD_ARCH=x86_64 -miphoneos-version-min=5.0 \
+FAT_LIB_SIMULATOR64_FLAGS = -arch x86_64 -DJ2OBJC_BUILD_ARCH=x86_64 -mios-simulator-version-min=5.0 \
   -isysroot $(FAT_LIB_SIMULATOR_SDK_DIR)
-FAT_LIB_SIMULATORARM_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -miphoneos-version-min=5.0 \
+FAT_LIB_SIMULATORARM_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -mios-simulator-version-min=5.0 \
   -isysroot $(FAT_LIB_SIMULATOR_SDK_DIR)
 
 # Mac Catalyst build flags
@@ -55,13 +55,13 @@ FAT_LIB_MAC_CATALYST_FLAGS = $(FAT_LIB_OSX_FLAGS) -arch x86_64 -DJ2OBJC_BUILD_AR
   -iframework $(FAT_LIB_MACOSX_SDK_DIR)/System/iOSSupport/System/Library/Frameworks
 
 # tvOS build flags
-FAT_LIB_TV_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -mappletvos-version-min=9.0 \
+FAT_LIB_TV_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -mtvos-version-min=9.0 \
   -isysroot $(FAT_LIB_TV_SDK_DIR)
 
 # tvOS Simulator build flags
-FAT_LIB_TVSIMULATOR_FLAGS = -arch x86_64 -DJ2OBJC_BUILD_ARCH=x86_64 -mappletvos-version-min=9.0 \
+FAT_LIB_TVSIMULATOR_FLAGS = -arch x86_64 -DJ2OBJC_BUILD_ARCH=x86_64 -mtvos-simulator-version-min=9.0 \
   -isysroot $(FAT_LIB_TVSIMULATOR_SDK_DIR)
-FAT_LIB_TVSIMULATORARM_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -mappletvos-version-min=9.0 \
+FAT_LIB_TVSIMULATORARM_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -mtvos-simulator-version-min=9.0 \
   -isysroot $(FAT_LIB_TVSIMULATOR_SDK_DIR)
 
 # watchOS build flags
@@ -71,14 +71,14 @@ FAT_LIB_WATCH64_FLAGS = -arch arm64_32 -DJ2OBJC_BUILD_ARCH=arm64_32 -mwatchos-ve
   -isysroot $(FAT_LIB_WATCH_SDK_DIR)
 
 # watchOS Simulator build flags
-FAT_LIB_WATCHSIMULATOR_FLAGS = -arch i386 -DJ2OBJC_BUILD_ARCH=i386 -mwatchos-version-min=2.0 \
+FAT_LIB_WATCHSIMULATOR_FLAGS = -arch i386 -DJ2OBJC_BUILD_ARCH=i386 -mwatchos-simulator-version-min=2.0 \
   -isysroot $(FAT_LIB_WATCHSIMULATOR_SDK_DIR)
-FAT_LIB_WATCHSIMULATOR64_FLAGS = -arch x86_64 -DJ2OBJC_BUILD_ARCH=x86_64 -mwatchos-version-min=7.0 \
+FAT_LIB_WATCHSIMULATOR64_FLAGS = -arch x86_64 -DJ2OBJC_BUILD_ARCH=x86_64 -mwatchos-simulator-version-min=7.0 \
   -isysroot $(FAT_LIB_WATCHSIMULATOR_SDK_DIR)
-FAT_LIB_WATCHSIMULATORARM_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -mwatchos-version-min=7.0 \
+FAT_LIB_WATCHSIMULATORARM_FLAGS = -arch arm64 -DJ2OBJC_BUILD_ARCH=arm64 -mwatchos-simulator-version-min=7.0 \
   -isysroot $(FAT_LIB_WATCHSIMULATOR_SDK_DIR)
 
-FAT_LIB_XCODE_FLAGS = -arch $(1) -DJ2OBJC_BUILD_ARCH=$(1) -miphoneos-version-min=5.0 \
+FAT_LIB_XCODE_FLAGS = -arch $(1) -DJ2OBJC_BUILD_ARCH=$(1) -mios-version-min=5.0 \
   -isysroot $(SDKROOT)
 
 # Only iPhone armv7 and arm64 builds need a bitcode marker.
